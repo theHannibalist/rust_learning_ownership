@@ -16,10 +16,27 @@ fn main() {
     let r4 = &s3;
     println!("{} {} {}",s3,r3,r4);
 
-    
+    let s4 = String::from("Slice Test");
+    // let word = first_word(&s4);
+    let first_word = &s4[0..5];
+    let second_word = &s4[6..10];
+
+    println!("first word : {} , second word : {}", first_word , second_word );
 
 
 }
+
+// fn first_word (s: &String) -> usize {
+//     let bytes = s.as_bytes();
+
+//     for (i , &item) in bytes.iter().enumerate() {
+//         if item ==  b' ' {
+//             return i;
+//         }
+//     }
+
+//     s.len()
+// }
 
 fn calculate_length (s: &String) -> usize {
     s.len()
